@@ -1,0 +1,489 @@
+div, table {
+    box-sizing: border-box;
+}
+.calendar-container {
+    text-align: center;
+    padding: 0px;
+    margin: auto;
+    border: 1px solid #eee;
+    width : 100%;
+    max-width: 1440px;
+    min-width: 1000px;
+    height: 900px;   
+    transform: translate(0%, 3%);
+}
+.calendar {
+    width: 70%;
+}
+.todo {
+    width: 30%;
+}
+.calendar-top {
+    height: 15%;
+    border: 1px solid #eee;
+    border-bottom: none;
+    position: relative;
+}
+.calendar-bottom {
+    height: 85%;
+}
+.todo-top {
+    height: 15%;
+    border: 1px solid #eee;
+    border-bottom: none;
+    position: relative;
+}
+.todo-bottom {
+    height: 85%;
+    border: 1px solid #eee;
+}
+.menu {
+    width: 100%;
+    max-width: 80px;
+    height: 80px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translate(0%, -50%);
+}
+.line {
+    background: black;
+    opacity: 40%;
+    margin: 6px auto;
+    max-width: 56px;
+    width: 100%;
+    height:5px; 
+    border-radius:2px;
+    position: relative;
+    top: 25%;
+    transform: translate(0%, -50%);
+}
+.nowDate {
+    font-size: 32px;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.calendar-top-img-box {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+.img {
+    width: 125px;
+    border-radius: 15px;
+}
+.id {
+    font-size: 25px;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%); 
+}
+.nowDay {
+    font-size: 27px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%); 
+    
+}
+.nowTime{
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translate(-40%, -30%); 
+}
+.custom_calendar_table{
+    width: 100%;
+}
+.custom_calendar_table th {
+    width: calc(100% / 7);
+    border: 1px solid #eee;
+}
+
+.cal_week tr th:nth-child(1) {
+    color: red;
+}
+.cal_week tr th:nth-child(7) {
+    color: blue;
+}
+.cal_day {
+    width: 100%;
+    height: 91.74%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cal_day div {
+    width: calc(100% / 7);
+    border: 1px solid #eee;
+    text-align: left;
+}
+.cal_day div:hover {
+    outline: 2px solid #d0ebff;
+}
+.prev, .next {
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    
+}
+.cal_date th {
+    height: 35px;
+}
+.cal_day div:nth-child(7n+1) {
+    color: red;
+}
+.cal_day div:nth-child(7n) {
+    color: blue;
+}
+.select_day {
+    background-color: #d0ebff;
+    transition: all 0.3s;
+}
+.todo-top-plus {
+    width: 50px;
+    height: 50px;
+    
+}
+.todo-top-plus-img {
+    background: url("../public/아이콘/할일작성전.png");
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%); 
+    border-radius: 50px;
+    margin: 0px;   
+}
+.plus-img-ing {
+    background: url("../public/아이콘/할일작성중.png");
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%); 
+    border-radius: 50px;
+    margin: 0px; 
+}
+
+.todo-bottom {
+    position: relative;
+}
+.basic-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    opacity: 0.4;
+}
+
+//투두모달css
+.todoModal {
+    position: fixed;
+    right: 0;
+    top: 900px*0.15;
+    width: 1440px*0.3;
+    height: 900px*0.85;
+    z-index: 3;
+    border-left: none;
+    border-bottom: none;
+}
+.white-box {
+    background-color: white;
+    opacity: 0.8;
+}
+.gray-box {
+    font-size: 13px;
+    text-align: start;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 80%;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgba(238,238,238,0.7);
+    border: none;
+}
+.title {
+    margin-top: 60px;
+}
+.todoModal-todo {
+    font-size: 13px;
+    text-align: start;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgba(238,238,238,0.7);
+    border: none;
+}
+.todoModal-todo-input{
+    font-size: 13px;
+    text-align: start;
+    margin: 0 auto;
+    width: 90%;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgba(238,238,238,0.7);
+    border: none;
+}
+.todoModal-todo-plus{
+    font-size: 15px;
+    text-align: start;
+    margin: 0 auto;
+    padding: 7px;
+    width: 10%;
+    border-radius: 10px;
+    background-color: rgba(238,238,238,0.7);
+    border: none;
+}
+.memo{
+    
+}
+
+.todo-close{
+    width: 100%;
+    max-width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    transform: translate(-50%, -50%); 
+}
+.todo-close-line1 {
+    background: black;
+    opacity: 40%;
+    max-width: 35px;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotate(45deg);
+}
+.todo-close-line2 {
+    background: black;
+    opacity: 40%;
+    max-width: 35px;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    margin: 0 auto;
+    position: relative;
+    top: 46%;
+    transform: translate(0, -50%);
+    transform: rotate(-45deg);
+}
+
+
+//메뉴모달css
+.menuModal {
+    position: fixed;
+    width: 540px;
+    height: 900px;
+    z-index: 2;
+    border: 1px solid #eee;
+}
+.menuModal-top {
+    height: 50%;
+    position: relative;
+    border-bottom: 1px solid #ced4da;
+    padding: 40px;
+}
+.menuModal-top img {
+    width: 125px;
+    border-radius: 25px;
+    display: block;
+
+}
+.menuModal-top-name {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: start;
+    padding-top: 10px;
+}
+.menuModal-top-greet {
+    font-size: 25px;
+    text-align: start;
+    padding-top: 30px;
+}
+.close{
+    width: 100%;
+    max-width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 15%;
+    left: 90%;
+    transform: translate(-50%, -50%); 
+}
+.close-line1 {
+    background: black;
+    opacity: 40%;
+    max-width: 56px;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotate(45deg);
+}
+.close-line2 {
+    background: black;
+    opacity: 40%;
+    max-width: 56px;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    margin: 0 auto;
+    position: relative;
+    top: 47%;
+    transform: translate(0, -50%);
+    transform: rotate(-45deg);
+}
+.menuModal-bottom {
+    height: 50%;
+    position: relative;
+}
+.change {
+    padding: 45px;
+    border-bottom: 1px solid #ced4da;
+    font-size: 20px;
+    font-weight: 600;
+}
+.left {
+    text-align: start;
+    
+}
+.menuModal-bottom-copyright {
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+//프로필/테마색변경
+.background {
+    background: rgba(0,0,0,0.4);
+    width: 1440px;
+    height: 900px;
+    position: fixed;
+    z-index: 3;
+}
+.white-background {
+    background: white;
+    width: 550px;
+    height: 650px;
+    padding: 60px 20px 30px 20px;
+    position: relative;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 15px;
+}
+.sub-close{
+    width: 100%;
+    max-width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%); 
+}
+.sub-close-line1 {
+    background: black;
+    opacity: 40%;
+    max-width: 56px;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotate(45deg);
+}
+.sub-close-line2 {
+    background: black;
+    opacity: 40%;
+    max-width: 56px;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    margin: 0 auto;
+    position: relative;
+    top: 47%;
+    transform: translate(0, -50%);
+    transform: rotate(-45deg);
+}
+.changeImg {
+    display: block;
+    margin: 0 auto;
+}
+.currentText {
+    font-size: 20px;
+    font-weight: 600;
+}
+.imgBox{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    width: 400px;
+}
+.imgBox-img{
+    width: 80px;
+    border-radius: 15px;
+    margin: 10px;
+}
+.imgBox-img:hover {
+    outline: 2px solid #d0ebff;
+}
+.info-change {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 20px;
+    width: 150px;
+    background-color: #d0ebff;
+    border-radius: 20px;
+}
+.info-change:hover {
+    outline: 2px solid #d0ebff;
+}
+.alert {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+}
+.nowColor {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.colorBox{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    width: 400px;
+}
+.colorBox-color{
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    margin: 10px;
+}

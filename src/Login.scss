@@ -1,0 +1,50 @@
+div input p button{
+    box-sizing: border-box;
+}
+.login-container {
+    text-align: center;
+    padding: 0px;
+    margin: auto;
+    border: 1px solid black;
+    width : 600px;
+    height: 780px;
+    position: relative;
+    transform: translate(0%, 5%);
+}
+.input-id {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0.8em;
+    outline-style: none;
+    
+}
+.input-id::-webkit-input-placeholder {//-webkit으로 구글만 지원가능 인터넷 사파리등은 moz 등 추가해야함
+    font-size: 14px;
+}
+.input-id::-webkit-input-placeholder {//-webkit으로 구글만 지원가능 인터넷 사파리등은 moz 등 추가해야함
+    text-align: center;
+}
+.start {
+    padding: 1.1em;
+    width: 25%;
+    border-radius: 30px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+.copyright {
+    font-size: 13px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+}
